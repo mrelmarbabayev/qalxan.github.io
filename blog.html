@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloq - BlogAz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">BlogAz</div>
+                <div class="nav-links">
+                    <a href="index.html">Ana Səhifə</a>
+                    <a href="blog.html" class="active">Bloq</a>
+                    <a href="contact.html">Əlaqə</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Axtarış...">
+                    <button id="searchButton">Axtar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="blog-header">
+                <h1>Bloq</h1>
+                <p>Ən son məqalələrimiz və xəbərlərimiz</p>
+            </section>
+            
+            <section class="blog-categories">
+                <div class="category-filters">
+                    <button class="category-btn active">Hamısı</button>
+                    <button class="category-btn">Mədəniyyət</button>
+                    <button class="category-btn">Tarix</button>
+                    <button class="category-btn">Səyahət</button>
+                    <button class="category-btn">Mətbəx</button>
+                </div>
+            </section>
+
+            <section class="all-posts">
+                <div class="blog-posts" id="blogPosts">
+                    <!-- All blog posts will be dynamically added here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BlogAz</h3>
+                    <p>Azərbaycan haqqında ən maraqlı məqalələr və xəbərlər.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Keçidlər</h3>
+                    <a href="index.html">Ana Səhifə</a>
+                    <a href="blog.html">Bloq</a>
+                    <a href="contact.html">Əlaqə</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlogAz. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

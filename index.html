@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qalxan - Virus Axtarış Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-virus"></i>
+                    Qalxan
+                </div>
+                <div class="nav-links">                    <a href="index.html" class="active">Ana Səhifə</a>                    <a href="statistics.html">Statistika</a>                    <a href="news.html">Xəbərlər</a>                    <a href="about.html">Haqqımızda</a>                    <a href="contact.html">Əlaqə</a>                    <a href="insident.html" class="report-nav-btn">                        <i class="fas fa-exclamation-triangle"></i>                        İnsident Bildir                    </a>                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="search-hero">
+                <h1>Virus və Zərərli Proqramları Axtarın</h1>
+                <p>40+ antivirus bazasında axtarış</p>
+
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="mainSearchInput" placeholder="Virus adı, tipi və ya əlamətlərini daxil edin...">
+                        <button id="mainSearchButton">
+                            <i class="fas fa-search"></i>
+                            Axtar
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <button class="filter-btn active" data-type="all">
+                            <i class="fas fa-globe"></i>
+                            Hamısı
+                        </button>
+                        <button class="filter-btn" data-type="malware">
+                            <i class="fas fa-bug"></i>
+                            Zərərli Proqramlar
+                        </button>
+                        <button class="filter-btn" data-type="ransomware">
+                            <i class="fas fa-lock"></i>
+                            Ransomware
+                        </button>
+                        <button class="filter-btn" data-type="trojan">
+                            <i class="fas fa-horse"></i>
+                            Trojanlar
+                        </button>
+                        <button class="filter-btn" data-type="spyware">
+                            <i class="fas fa-eye"></i>
+                            Casus Proqramlar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-database"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">1.2M+</span>
+                            <span class="stat-label">Virus Bazası</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-shield-virus"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Antivirus Mühərriki</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Yenilənmə</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="search-results" id="searchResults" style="display: none;">
+                <h2>Axtarış Nəticələri</h2>
+                <div class="results-info">
+                    <span class="results-count">0 nəticə tapıldı</span>
+                    <div class="results-sort">
+                        <label>Sırala:</label>
+                        <select id="sortResults">
+                            <option value="date">Tarixə görə</option>
+                            <option value="threat">Təhlükə səviyyəsinə görə</option>
+                            <option value="name">Ada görə</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="results-grid" id="resultsGrid">
+                    <!-- Results will be added dynamically -->
+                </div>
+            </section>
+
+            <section class="threat-categories">
+                <h2>Təhlükə Kateqoriyaları</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <i class="fas fa-bug"></i>
+                        <h3>Zərərli Proqramlar</h3>
+                        <p>Sistem və fayllara zərər verən proqramlar</p>
+                        <span class="count">45,234</span>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Ransomware</h3>
+                        <p>Faylları şifrələyən və pul tələb edən viruslar</p>
+                        <span class="count">12,456</span>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-horse"></i>
+                        <h3>Trojanlar</h3>
+                        <p>Gizli arxa qapılar yaradan proqramlar</p>
+                        <span class="count">34,567</span>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Casus Proqramlar</h3>
+                        <p>Məlumatları oğurlayan proqramlar</p>
+                        <span class="count">23,789</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="latest-threats">
+                <h2>Son Aşkarlanan Təhlükələr</h2>
+                <div class="threats-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Təhlükə Adı</th>
+                                <th>Tipi</th>
+                                <th>Təhlükə Səviyyəsi</th>
+                                <th>Aşkarlanma Tarixi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="latestThreatsBody">
+                            <!-- Latest threats will be added dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="recommended-sites">
+                <h2>Tövsiyə Olunan Saytlar</h2>
+                <div class="sites-grid">
+                    <a href="https://president.az" target="_blank" class="site-card">
+                        <div class="site-content">
+                            <div class="site-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="site-info">
+                                <h3>Azərbaycan Respublikasının Prezidenti</h3>
+                                <div class="site-url">
+                                    <i class="fas fa-globe"></i>
+                                    <span>president.az</span>
+                                </div>
+                            </div>
+                            <div class="visit-site">
+                                <span>Sayta keçid</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://mehriban-aliyeva.az" target="_blank" class="site-card">
+                        <div class="site-content">
+                            <div class="site-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="site-info">
+                                <h3>Azərbaycanın Birinci vitse-prezidenti</h3>
+                                <div class="site-url">
+                                    <i class="fas fa-globe"></i>
+                                    <span>mehriban-aliyeva.az</span>
+                                </div>
+                            </div>
+                            <div class="visit-site">
+                                <span>Sayta keçid</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://dtx.gov.az" target="_blank" class="site-card">
+                        <div class="site-content">
+                            <div class="site-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="site-info">
+                                <h3>Dövlət Təhlükəsizliyi Xidməti</h3>
+                                <div class="site-url">
+                                    <i class="fas fa-globe"></i>
+                                    <span>dtx.gov.az</span>
+                                </div>
+                            </div>
+                            <div class="visit-site">
+                                <span>Sayta keçid</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://mia.gov.az" target="_blank" class="site-card">
+                        <div class="site-content">
+                            <div class="site-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="site-info">
+                                <h3>Daxili İşlər Nazirliyi</h3>
+                                <div class="site-url">
+                                    <i class="fas fa-globe"></i>
+                                    <span>mia.gov.az</span>
+                                </div>
+                            </div>
+                            <div class="visit-site">
+                                <span>Sayta keçid</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qalxan</h3>
+                    <p>Azərbaycanın ilk onlayn virus axtarış platforması</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Əlaqə</h3>
+                    <p>Email: info@qalxan.az</p>
+                    <p>Tel: +994 12 345 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qalxan. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

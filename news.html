@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xəbərlər - Qalxan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-virus"></i>
+                    Qalxan
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Ana Səhifə</a>
+                    <a href="statistics.html">Statistika</a>
+                    <a href="news.html" class="active">Xəbərlər</a>
+                    <a href="about.html">Haqqımızda</a>
+                    <a href="contact.html">Əlaqə</a>
+                    <a href="insident.html" class="report-nav-btn">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        İnsident Bildir
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="news-section">
+                <h1>Təhlükəsizlik Xəbərləri</h1>
+                <p class="news-intro">Kiber təhlükəsizlik sahəsində ən son xəbərlər və yeniliklər</p>
+
+                <div class="news-filters">
+                    <div class="filter-group">
+                        <label>Kateqoriya:</label>
+                        <select id="newsCategory">
+                            <option value="all">Hamısı</option>
+                            <option value="threats">Təhdidlər</option>
+                            <option value="updates">Yeniliklər</option>
+                            <option value="alerts">Xəbərdarlıqlar</option>
+                            <option value="research">Araşdırmalar</option>
+                        </select>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="newsSearch" placeholder="Xəbərlərdə axtar...">
+                        <button id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featured-news">
+                    <div class="featured-news-card">
+                        <div class="news-image">
+                            <img src="images/ransomware-attack.jpg" alt="Ransomware hücumu">
+                            <span class="news-category">Təhdid</span>
+                        </div>
+                        <div class="news-content">
+                            <h2>Yeni Ransomware Dalğası: Maliyyə Sektoru Hədəfdə</h2>
+                            <p class="news-meta">
+                                <span class="date"><i class="fas fa-calendar"></i> 15 Mart 2024</span>
+                                <span class="author"><i class="fas fa-user"></i> Admin</span>
+                            </p>
+                            <p class="news-excerpt">Son həftələrdə Azərbaycanın maliyyə sektoruna qarşı geniş miqyaslı ransomware hücumları müşahidə olunur...</p>
+                            <a href="#" class="read-more">Ətraflı <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/phishing.jpg" alt="Fişinq kampaniyası">
+                            <span class="news-category">Xəbərdarlıq</span>
+                        </div>
+                        <h3>Yeni Fişinq Kampaniyası Aşkarlandı</h3>
+                        <p class="news-meta">
+                            <span class="date"><i class="fas fa-calendar"></i> 14 Mart 2024</span>
+                        </p>
+                        <p>Bank müştərilərinə qarşı yeni fişinq kampaniyası aşkarlandı. İstifadəçilərə saxta bank bildirişləri göndərilir...</p>
+                        <a href="#" class="read-more">Ətraflı <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/security-update.jpg" alt="Təhlükəsizlik yeniləməsi">
+                            <span class="news-category">Yenilik</span>
+                        </div>
+                        <h3>Windows-un Kritik Təhlükəsizlik Yeniləməsi</h3>
+                        <p class="news-meta">
+                            <span class="date"><i class="fas fa-calendar"></i> 13 Mart 2024</span>
+                        </p>
+                        <p>Microsoft Windows əməliyyat sistemi üçün kritik təhlükəsizlik yeniləməsi yayımladı. Yeniləmə zero-day boşluğunu aradan qaldırır...</p>
+                        <a href="#" class="read-more">Ətraflı <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/malware-research.jpg" alt="Zərərli proqram araşdırması">
+                            <span class="news-category">Araşdırma</span>
+                        </div>
+                        <h3>Yeni Android Zərərli Proqramı Aşkarlandı</h3>
+                        <p class="news-meta">
+                            <span class="date"><i class="fas fa-calendar"></i> 12 Mart 2024</span>
+                        </p>
+                        <p>Tədqiqatçılar Android cihazlarda bank məlumatlarını oğurlayan yeni zərərli proqram aşkar etdilər...</p>
+                        <a href="#" class="read-more">Ətraflı <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/ddos-attack.jpg" alt="DDoS hücumu">
+                            <span class="news-category">Təhdid</span>
+                        </div>
+                        <h3>DDoS Hücumlarında Artım</h3>
+                        <p class="news-meta">
+                            <span class="date"><i class="fas fa-calendar"></i> 11 Mart 2024</span>
+                        </p>
+                        <p>Son bir ay ərzində Azərbaycanda DDoS hücumlarının sayında 40% artım müşahidə olunur...</p>
+                        <a href="#" class="read-more">Ətraflı <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </section>
+
+            <aside class="news-sidebar">
+                <div class="sidebar-section">
+                    <h3>Populyar Xəbərlər</h3>
+                    <div class="popular-news">
+                        <div class="popular-news-item">
+                            <img src="images/cyber-attack.jpg" alt="Kiber hücum">
+                            <div class="popular-news-content">
+                                <h4>Kritik İnfrastruktura Kiber Hücum</h4>
+                                <span class="date">10 Mart 2024</span>
+                            </div>
+                        </div>
+                        <div class="popular-news-item">
+                            <img src="images/security-conference.jpg" alt="Təhlükəsizlik konfransı">
+                            <div class="popular-news-content">
+                                <h4>Bakıda Kiber Təhlükəsizlik Konfransı</h4>
+                                <span class="date">9 Mart 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Təhlükəsizlik Məsləhətləri</h3>
+                    <ul class="security-tips">
+                        <li><i class="fas fa-check"></i> Güclü parollardan istifadə edin</li>
+                        <li><i class="fas fa-check"></i> İki faktorlu autentifikasiyanı aktiv edin</li>
+                        <li><i class="fas fa-check"></i> Proqramları mütəmadi yeniləyin</li>
+                        <li><i class="fas fa-check"></i> Şübhəli linkləri açmayın</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qalxan</h3>
+                    <p>Azərbaycanın ilk onlayn virus axtarış platforması</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Əlaqə</h3>
+                    <p>Email: info@qalxan.az</p>
+                    <p>Tel: +994 12 345 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qalxan. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/news.js"></script>
+</body>
+</html> 

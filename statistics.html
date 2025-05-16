@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika - Qalxan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-virus"></i>
+                    Qalxan
+                </div>
+                <div class="nav-links">                    <a href="index.html">Ana Səhifə</a>                    <a href="statistics.html" class="active">Statistika</a>                    <a href="news.html">Xəbərlər</a>                    <a href="about.html">Haqqımızda</a>                    <a href="contact.html">Əlaqə</a>                    <a href="insident.html" class="report-nav-btn">                        <i class="fas fa-exclamation-triangle"></i>                        İnsident Bildir                    </a>                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="dashboard">
+                <h1>Təhlükəsizlik Statistikası</h1>
+                <p class="dashboard-intro">Real vaxt rejimində təhlükəsizlik təhdidləri və hücum statistikası</p>
+
+                <div class="dashboard-filters">
+                    <div class="filter-group">
+                        <label>Tarix Aralığı:</label>
+                        <select id="timeRange">
+                            <option value="today">Bu gün</option>
+                            <option value="week">Son 7 gün</option>
+                            <option value="month" selected>Son 30 gün</option>
+                            <option value="year">Son 1 il</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="quick-stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-shield-virus"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">127,493</span>
+                            <span class="stat-label">Ümumi Hücum</span>
+                        </div>
+                        <span class="stat-change increase">+12.5%</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-virus"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">45,782</span>
+                            <span class="stat-label">Zərərli Proqram</span>
+                        </div>
+                        <span class="stat-change increase">+8.3%</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-user-shield"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">89.7%</span>
+                            <span class="stat-label">Bloklama Dərəcəsi</span>
+                        </div>
+                        <span class="stat-change increase">+2.1%</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">3,241</span>
+                            <span class="stat-label">Kritik İnsidentlər</span>
+                        </div>
+                        <span class="stat-change decrease">-5.2%</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card full-width">
+                        <h2>Hücumların Ölkələr üzrə Paylanması</h2>
+                        <div class="country-stats-container">
+                            <div class="country-stats-grid">
+                                <div class="country-stat-item">
+                                    <div class="country-info">
+                                        <img src="https://flagcdn.com/w40/ru.png" alt="Rusiya" class="country-flag">
+                                        <span class="country-name">Rusiya</span>
+                                    </div>
+                                    <div class="attack-info">
+                                        <span class="attack-percentage">28.5%</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 28.5%"></div>
+                                        </div>
+                                        <span class="attack-count">36,335</span>
+                                    </div>
+                                </div>
+                                <div class="country-stat-item">
+                                    <div class="country-info">
+                                        <img src="https://flagcdn.com/w40/cn.png" alt="Çin" class="country-flag">
+                                        <span class="country-name">Çin</span>
+                                    </div>
+                                    <div class="attack-info">
+                                        <span class="attack-percentage">22.3%</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 22.3%"></div>
+                                        </div>
+                                        <span class="attack-count">28,431</span>
+                                    </div>
+                                </div>
+                                <div class="country-stat-item">
+                                    <div class="country-info">
+                                        <img src="https://flagcdn.com/w40/ir.png" alt="İran" class="country-flag">
+                                        <span class="country-name">İran</span>
+                                    </div>
+                                    <div class="attack-info">
+                                        <span class="attack-percentage">15.7%</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 15.7%"></div>
+                                        </div>
+                                        <span class="attack-count">20,016</span>
+                                    </div>
+                                </div>
+                                <div class="country-stat-item">
+                                    <div class="country-info">
+                                        <img src="https://flagcdn.com/w40/us.png" alt="ABŞ" class="country-flag">
+                                        <span class="country-name">ABŞ</span>
+                                    </div>
+                                    <div class="attack-info">
+                                        <span class="attack-percentage">12.4%</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 12.4%"></div>
+                                        </div>
+                                        <span class="attack-count">15,809</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Hücum Növləri</h2>
+                        <canvas id="attackTypesChart"></canvas>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Zaman üzrə Hücumlar</h2>
+                        <canvas id="attackTimelineChart"></canvas>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Ən Çox Yayılmış Zərərli Proqramlar</h2>
+                        <div class="malware-list">
+                            <div class="malware-item">
+                                <span class="malware-name">Emotet</span>
+                                <span class="malware-count">12,453</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="malware-item">
+                                <span class="malware-name">TrickBot</span>
+                                <span class="malware-count">8,721</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="malware-item">
+                                <span class="malware-name">Qakbot</span>
+                                <span class="malware-count">6,342</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div class="malware-item">
+                                <span class="malware-name">Dridex</span>
+                                <span class="malware-count">4,567</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 35%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Təhlükə Səviyyələri</h2>
+                        <canvas id="threatLevelsChart"></canvas>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Son İnsidentlər</h2>
+                        <div class="incidents-list">
+                            <div class="incident-item high">
+                                <div class="incident-header">
+                                    <span class="incident-type">DDoS Hücumu</span>
+                                    <span class="incident-time">2 saat əvvəl</span>
+                                </div>
+                                <p class="incident-description">Maliyyə sektoruna yönəlmiş geniş miqyaslı DDoS hücumu</p>
+                            </div>
+                            <div class="incident-item critical">
+                                <div class="incident-header">
+                                    <span class="incident-type">Ransomware</span>
+                                    <span class="incident-time">5 saat əvvəl</span>
+                                </div>
+                                <p class="incident-description">Yeni növ şifrələmə virusu aşkarlandı</p>
+                            </div>
+                            <div class="incident-item medium">
+                                <div class="incident-header">
+                                    <span class="incident-type">Fişinq Kampaniyası</span>
+                                    <span class="incident-time">8 saat əvvəl</span>
+                                </div>
+                                <p class="incident-description">Bank müştərilərinə qarşı fişinq kampaniyası</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qalxan</h3>
+                    <p>Azərbaycanın ilk onlayn virus axtarış platforması</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Əlaqə</h3>
+                    <p>Email: info@qalxan.az</p>
+                    <p>Tel: +994 12 345 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qalxan. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/statistics.js"></script>
+</body>
+</html> 

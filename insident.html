@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnsident Bildirişi - Qalxan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-virus"></i>
+                    Qalxan
+                </div>
+                <div class="nav-links">                    <a href="index.html">Ana Səhifə</a>                    <a href="statistics.html">Statistika</a>                    <a href="news.html">Xəbərlər</a>                    <a href="about.html">Haqqımızda</a>                    <a href="contact.html">Əlaqə</a>                    <a href="insident.html" class="active report-nav-btn">                        <i class="fas fa-exclamation-triangle"></i>                        İnsident Bildir                    </a>                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="incident-report">
+                <h1>İnsident Bildirişi</h1>
+                <p>Təhlükəsizlik insidenti haqqında məlumat vermək üçün aşağıdakı formu doldurun</p>
+
+                <form id="incidentForm" class="incident-form">
+                    <div class="form-group">
+                        <label for="fullName">Ad və Soyad *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Əlaqə Nömrəsi *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+994 XX XXX XX XX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-poçt Ünvanı *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Təşkilat</label>
+                        <input type="text" id="organization" name="organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">İnsident Kateqoriyası *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Kateqoriya seçin</option>
+                            <option value="malware">Zərərli Proqram</option>
+                            <option value="ransomware">Fidyə Proqramı (Ransomware)</option>
+                            <option value="phishing">Fişinq Hücumu</option>
+                            <option value="ddos">DDoS Hücumu</option>
+                            <option value="data-breach">Məlumat Sızıntısı</option>
+                            <option value="unauthorized-access">İcazəsiz Giriş</option>
+                            <option value="other">Digər</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">İnsident Haqqında Məlumat *</label>
+                        <textarea id="description" name="description" rows="5" required 
+                            placeholder="İnsidentin təfərrüatlarını təsvir edin. Nə baş verdi? Nə vaxt baş verdi? Hansı sistemlər təsirləndi?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Təcililik Səviyyəsi *</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="">Səviyyə seçin</option>
+                            <option value="critical">Kritik - Təcili Müdaxilə Tələb Edir</option>
+                            <option value="high">Yüksək - 24 Saat Ərzində</option>
+                            <option value="medium">Orta - 48 Saat Ərzində</option>
+                            <option value="low">Aşağı - 1 Həftə Ərzində</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            İnsidenti Bildir
+                        </button>
+                        <button type="reset" class="reset-btn">
+                            <i class="fas fa-undo"></i>
+                            Formu Təmizlə
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qalxan</h3>
+                    <p>Azərbaycanın ilk onlayn virus axtarış platforması</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Əlaqə</h3>
+                    <p>Email: info@qalxan.az</p>
+                    <p>Tel: +994 12 345 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qalxan. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haqqımızda - Qalxan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-virus"></i>
+                    Qalxan
+                </div>
+                <div class="nav-links">                    <a href="index.html">Ana Səhifə</a>                    <a href="statistics.html">Statistika</a>                    <a href="news.html">Xəbərlər</a>                    <a href="about.html" class="active">Haqqımızda</a>                    <a href="contact.html">Əlaqə</a>                    <a href="insident.html" class="report-nav-btn">                        <i class="fas fa-exclamation-triangle"></i>                        İnsident Bildir                    </a>                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="about-section">
+                <h1>Haqqımızda</h1>
+                <p class="about-intro">Qalxan - Azərbaycanın ilk onlayn virus və təhlükəsizlik platforması</p>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h2>Missiyamız</h2>
+                        <p>Azərbaycanın kiber təhlükəsizlik sahəsində etibarlı tərəfdaşı olmaq və istifadəçilərimizi rəqəmsal təhdidlərdən qorumaq.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <i class="fas fa-eye"></i>
+                        <h2>Vizyonumuz</h2>
+                        <p>Qabaqcıl texnologiyalar və yerli həllər vasitəsilə Azərbaycanın kiber təhlükəsizlik sahəsində lider platforması olmaq.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <i class="fas fa-users"></i>
+                        <h2>Komandamız</h2>
+                        <p>Təcrübəli mütəxəssislərdən ibarət komandamız 7/24 sizin təhlükəsizliyiniz üçün çalışır.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Xidmətlərimiz</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-search"></i>
+                            <h3>Virus Axtarışı</h3>
+                            <p>40+ antivirus bazasında zərərli proqramların axtarışı</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h3>İnsident Bildirişi</h3>
+                            <p>Təhlükəsizlik insidentlərinin qeydiyyatı və analizi</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Statistika</h3>
+                            <p>Real vaxt rejimində təhlükəsizlik statistikası</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-book"></i>
+                            <h3>Məlumatlandırma</h3>
+                            <p>Kiber təhlükəsizlik üzrə məlumat bazası</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <h2>Rəqəmlərlə Biz</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">1.2M+</span>
+                            <span class="stat-label">Virus Bazası</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Antivirus Mühərriki</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Gündəlik Scan</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Dəstək</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attack-stats-section">
+                    <h2>Hücum Statistikası</h2>
+                    <div class="attack-stats-container">
+                        <div class="map-container">
+                            <div id="attackMap"></div>
+                        </div>
+                        <div class="country-stats-grid">
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/ru.png" alt="Rusiya" class="country-flag">
+                                    <span class="country-name">Rusiya</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">28.5%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 28.5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/cn.png" alt="Çin" class="country-flag">
+                                    <span class="country-name">Çin</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">22.3%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 22.3%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/ir.png" alt="İran" class="country-flag">
+                                    <span class="country-name">İran</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">15.7%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 15.7%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/us.png" alt="ABŞ" class="country-flag">
+                                    <span class="country-name">ABŞ</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">12.4%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 12.4%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/in.png" alt="Hindistan" class="country-flag">
+                                    <span class="country-name">Hindistan</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">8.6%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 8.6%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="country-stat-item">
+                                <div class="country-info">
+                                    <img src="https://flagcdn.com/w40/tr.png" alt="Türkiyə" class="country-flag">
+                                    <span class="country-name">Türkiyə</span>
+                                </div>
+                                <div class="attack-info">
+                                    <span class="attack-percentage">6.8%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 6.8%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attack-stats-info">
+                        <p>* Son 30 günün statistikası əsasında hazırlanmışdır</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qalxan</h3>
+                    <p>Azərbaycanın ilk onlayn virus axtarış platforması</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Əlaqə</h3>
+                    <p>Email: info@qalxan.az</p>
+                    <p>Tel: +994 12 345 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qalxan. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
